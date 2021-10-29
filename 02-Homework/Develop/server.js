@@ -28,8 +28,9 @@ app.post('/api/notes', (req, res) => {
   fs.writeFile('./db/db.json', JSON.stringify(db), err => {
   if (err) {
     console.log(err);}
-    res.json(db);
+    res.json(db); 
   });
+  res.json(db);
 }
 );
 

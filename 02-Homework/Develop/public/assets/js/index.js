@@ -21,8 +21,8 @@ if (window.location.pathname === '/notes') {
 //   console.log("File data:", jsonString);
 // });
 
-const db=require("././db/db.json");
-app.get('')
+// const db=require("././db/db.json");
+// app.get('')
 
 // Show an element
 const show = (elem) => {
@@ -43,8 +43,8 @@ const getNotes = () =>
     headers: {
       'Content-Type': 'application/json',
     },
-    app.get('/notes', (req, res) =>
-    res.sendFile('notes.html')); 
+    // app.get('/notes', (req, res) =>
+    // res.sendFile('notes.html')); 
   });
 
 const saveNote = (note) =>

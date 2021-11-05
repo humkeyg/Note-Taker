@@ -29,12 +29,12 @@ app.post('/api/notes', (req, res) => {
   db.push(note);
   fs.writeFile('./db/db.json', JSON.stringify(db), err => {
   if (err) {
-    console.log(err);}
+    console.log(err);
     res.json(db); 
-  });
+  };
   res.json(db);
-}
-);
+})
+});
 
 app.post('/api/notes', (req, res) => {
   console.log(req.body);

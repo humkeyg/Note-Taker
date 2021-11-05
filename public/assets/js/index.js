@@ -12,18 +12,6 @@ if (window.location.pathname === '/notes') {
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
-// const fs = require("fs");
-// fs.readFile("././db/db.json", "utf8", (err, jsonString) => {
-//   if (err) {
-//     console.log("File read failed:", err);
-//     return;
-//   }
-//   console.log("File data:", jsonString);
-// });
-
-// const db=require("././db/db.json");
-// app.get('')
-
 // Show an element
 const show = (elem) => {
   elem.style.display = 'inline';
@@ -43,8 +31,6 @@ const getNotes = () =>
     headers: {
       'Content-Type': 'application/json',
     },
-    // app.get('/notes', (req, res) =>
-    // res.sendFile('notes.html')); 
   });
 
 const saveNote = (note) =>

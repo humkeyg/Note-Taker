@@ -40,6 +40,21 @@ app.post('/api/notes', (req, res) => {
   console.log(req.body);
 })
 
+app.delete('/api/notes/:id', (req, res) => {
+  for (var i=0; i<db.length; i++) {
+    if (db[i].id === req.params.id) {
+      db.splice(i, 1)
+    }
+  } fs.writeFile('./db/db.json', JSON.stringify(db), err => {
+    if (err) {
+      console.log(err);
+      res.json(db); 
+    };
+    res.json(db);
+  })
+  
+})
+
 app.get('*', (req, res) =>
 res.sendFile(path.join(__dirname, './public/index.html'))
 );

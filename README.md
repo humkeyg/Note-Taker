@@ -49,6 +49,7 @@ The following images show the web application's appearance and functionality:
 You are required to submit BOTH of the following for review:
 
 * The URL of the functional, deployed application.
+* https://safe-cliffs-78188.herokuapp.com/
 
 * The URL of the GitHub repository, with a unique name and a README describing the project.
 

@@ -45,7 +45,7 @@ app.delete('/api/notes/:id', (req, res) => {
     if (db[i].id === req.params.id) {
       db.splice(i, 1)
     }
-  } fs.writeFile('./db/db.json', JSON.stringify(db), err => {
+  } fs.writeFile('db.json', JSON.stringify(db), err => {
     if (err) {
       console.log(err);
       res.json(db); 
@@ -56,7 +56,7 @@ app.delete('/api/notes/:id', (req, res) => {
 })
 
 app.get('*', (req, res) =>
-res.sendFile(path.join(__dirname, './public/index.html'))
+res.sendFile(path.join(__dirname, 'index.html'))
 );
 
 app.listen(PORT, () =>
